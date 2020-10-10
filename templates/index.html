@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title> </title>
+</head>
+
+<body>
+    <section>
+        <ol style="padding-left: 0;">
+            {% for article in articles %}
+            <li>
+                <time datetime="{{article.created_at}}" style="display: block;">投稿日: {{article.created_at}}</style></time>
+                <a href="#">{{article.title}}</a>
+            </li>
+            {% endfor %}
+        </ol>
+    </section>
+</body>
+
+</html>

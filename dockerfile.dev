@@ -1,0 +1,6 @@
+# docker run -p 8080:8080 --name rust_blog -v {$PWD}:/webapp rust_blog:latest
+
+FROM rust:1.43
+WORKDIR /webapp
+RUN cargo install cargo-watch
+CMD cargo watch -x run
